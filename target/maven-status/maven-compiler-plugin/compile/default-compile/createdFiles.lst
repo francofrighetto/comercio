@@ -1,0 +1,16 @@
+com\comercio\Categoria\Categoria.class
+com\comercio\articulo\Articulo.class
+com\comercio\Categoria\CategoriaServiceImp.class
+com\comercio\articulo\ArticuloServiceImp.class
+com\comercio\articulo\ArticuloRepositorio.class
+com\comercio\articulo\ArticuloFoto.class
+com\comercio\ComercioApplication.class
+com\comercio\promocion\Promocion.class
+com\comercio\foto\FotoService.class
+com\comercio\foto\Foto.class
+com\comercio\Categoria\CategoriaService.class
+com\comercio\Categoria\CategoriaRepositorio.class
+com\comercio\foto\FotoRepositorio.class
+com\comercio\foto\FotoServiceImp.class
+com\comercio\articulo\ArticuloService.class
+com\comercio\Controlador.class
