@@ -1,3 +1,4 @@
+com\comercio\configuracion\WebMvcConfig.class
 com\comercio\Categoria\Categoria.class
 com\comercio\articulo\Articulo.class
 com\comercio\Categoria\CategoriaServiceImp.class
@@ -6,6 +7,7 @@ com\comercio\articulo\ArticuloRepositorio.class
 com\comercio\articulo\ArticuloFoto.class
 com\comercio\ComercioApplication.class
 com\comercio\promocion\Promocion.class
+com\comercio\cargaImagen\StorageService.class
 com\comercio\foto\FotoService.class
 com\comercio\foto\Foto.class
 com\comercio\Categoria\CategoriaService.class
