@@ -38,4 +38,28 @@ public class Foto {
     @JoinColumn(name="foto_art",referencedColumnName="art_id")
     @JsonBackReference
     private Articulo articulo;
+
+    public Foto(String foto_nombre, Articulo articulo) {
+        this.foto_nombre = foto_nombre;
+        this.articulo = articulo;
+    }
+    public Foto() {
+    }
+
+
+    public Articulo getArticulo(){
+        return this.articulo;
+    }
+
+    public void setArticulo(Articulo articulo){
+        this.articulo = articulo;
+    }
+
+    public String getFoto_nombre() {
+        return foto_nombre;
+    }
+
+    public void setFoto_nombre(String foto_nombre) {
+        this.foto_nombre = foto_nombre;
+    }
 }

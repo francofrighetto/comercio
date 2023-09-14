@@ -5,15 +5,41 @@
 package com.comercio.Categoria;
 
 import java.util.List;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
 
 /**
  *
  * @author Franco
  */
-public interface CategoriaService {
-    List<Categoria> listar();
-    void add(Categoria c);
-    Categoria listarId(int id);
-    void delete(int id);
-    void edit(Categoria cs);
+@Service
+public class CategoriaService{
+
+    @Autowired
+    CategoriaRepositorio repo;
+
+    public List<Categoria> listar() {
+        return repo.findAll();
+    }
+
+
+    public void add(Categoria c) {
+        repo.save(c);
+    }
+
+
+    public Categoria listarId(int id) {
+        throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
+    }
+
+
+    public void delete(int id) {
+        throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
+    }
+
+
+    public void edit(Categoria cs) {
+        throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
+    }
+    
 }

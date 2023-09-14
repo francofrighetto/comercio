@@ -26,7 +26,7 @@ public class Promocion {
     @Column
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private int promo_id;
-    private String promo_nombre;
-    private int promo_descuento;
-    private int promo_vigente;
+    private String nombre;
+    private int descuento;
+    private boolean promo_habilitado;
 }

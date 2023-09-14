@@ -26,5 +26,7 @@ public class Categoria {
     @Column
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private int cat_id;
-    private String cat_nombre;
+    private String nombre;
+
+    private boolean cat_habilitado;
 }

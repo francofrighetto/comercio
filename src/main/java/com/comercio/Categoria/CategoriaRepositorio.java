@@ -5,15 +5,14 @@
 package com.comercio.Categoria;
 
 import java.util.List;
+
+import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.data.repository.Repository;
 
 /**
  *
  * @author Franco
  */
-public interface CategoriaRepositorio extends Repository<Categoria,Integer>{
-    List<Categoria>findAll();
-    Categoria findById(int id_cat);
-    void save(Categoria c);
-    void deleteById(int c);
+public interface CategoriaRepositorio extends JpaRepository<Categoria,Integer> {
+
 }

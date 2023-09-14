@@ -7,20 +7,11 @@ package com.comercio.articulo;
 import com.comercio.Categoria.Categoria;
 import com.comercio.foto.Foto;
 import com.comercio.promocion.Promocion;
-import com.fasterxml.jackson.annotation.JsonIgnore;
 import com.fasterxml.jackson.annotation.JsonManagedReference;
 import java.math.BigDecimal;
 import java.util.List;
-import javax.persistence.CascadeType;
-import javax.persistence.Column;
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
-import javax.persistence.Id;
-import javax.persistence.JoinColumn;
-import javax.persistence.ManyToOne;
-import javax.persistence.OneToMany;
-import javax.persistence.Table;
+import javax.persistence.*;
+
 import lombok.Getter;
 import lombok.Setter;
 
@@ -40,42 +31,55 @@ public class Articulo {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private int art_id;
     
-    @Column
-    private int art_codigo;
-    
-    @Column
-    private Integer art_subcod;   
-    @Column
 
-    private int art_habilitado;
-    @Column
-    private String art_nombre;
-    @Column    
-    private int art_stock;
+    private int codigo;
     
-    @Column     
-    private BigDecimal art_precio_compra;
-    @Column    
-    private BigDecimal art_precio_venta;
+
+    private Integer subcodigo;
+
+
+    private boolean art_habilitado;
+
+    private String nombre;
+
+    private int stock;
     
-    @Column
-    private String art_descr;
+    private BigDecimal precio_compra;
+
+    private BigDecimal precio_venta;
     
-    @ManyToOne()
-    @JoinColumn(name="promocion",referencedColumnName="promo_id")
-    private Promocion promocion;
+    private String descripcion;
+
+
+    private String color;
+
+    private String unidadMedida;
+
+    //@ManyToOne()
+    //@JoinColumn(name="promocion",referencedColumnName="promo_id")
+    private int promocion;
     
     
     @ManyToOne()
     @JoinColumn(name="art_cat",referencedColumnName="cat_id")
     private Categoria art_cat;
-    
-    
-    @OneToMany(mappedBy="articulo", cascade = CascadeType.ALL)
-    //@JsonIgnore 
+
+
+    @ManyToMany(mappedBy="articulo")
+    //@JsonIgnore
     @JsonManagedReference
     private List<Foto> fotos;
 
+
+    public Articulo(int art_id) {
+        this.art_id = art_id;
+    }
+
+    public Articulo(){}
+
+    public int getArt_id(){
+        return this.art_id;
+    }
     
     
 }

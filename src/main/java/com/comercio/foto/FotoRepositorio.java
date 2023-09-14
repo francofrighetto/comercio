@@ -5,6 +5,8 @@
 package com.comercio.foto;
 
 import java.util.List;
+
+import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.data.repository.Repository;
 
 /**
@@ -12,9 +14,6 @@ import org.springframework.data.repository.Repository;
  * @author Franco
  */
 
-public interface FotoRepositorio extends Repository<Foto,Integer>{
-    List<Foto>findAll();
-    Foto findById(int id_header);
-    void save(Foto h);
-    void deleteById(int h);
+public interface FotoRepositorio extends JpaRepository<Foto,Integer> {
+
 }
